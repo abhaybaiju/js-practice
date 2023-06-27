@@ -1,0 +1,30 @@
+.text-title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.container {
+    align-items: center;
+}
+
+.table {
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.table thead th {
+    text-transform: uppercase;
+    padding: 0.8rem;
+}
+
+.table tbody tr td {
+    color: black;
+    padding: 0.8rem 1.2rem;
+    text-align: center;
+}
+
+.completed{
+    background: rgba(80, 200, 120, 0.5);
+}

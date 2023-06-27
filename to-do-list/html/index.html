@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css"
+</head>
+<script src="https://unpkg.com/feather-icons"></script>
+<header>
+    <div class="text-title">
+        Todoo : Your Todo List
+    </div>
+</header>
+<body>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <a href="" class="btn btn-md" id="add-item">
+                            <i data-feather="plus-circle"></i>
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="table-body">
+                <tr>
+                    <td class="check-cell">
+                        <a href="" class="btn btn-md check-btn">
+                            <i data-feather="check-circle"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <div contenteditable>
+                            Edit Item
+                        </div>
+                    </td>
+                    <td class="delete-cell">
+                        <a href="" class="btn btn-md delete-btn">
+                            <i data-feather="x-circle"></i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="../js/main.js"></script>
+    <script>
+        feather.replace()
+    </script>
+</body>
+</html>
