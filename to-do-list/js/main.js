@@ -27,8 +27,33 @@ function deleteItem(e){
 function checkItem(e){
     e.preventDefault()
     var row = e.currentTarget.parentNode;
-    row.classList.add("completed")
+    if (row.classList.contains('completed')){
+        row.classList.remove('completed')
+    } else {
+        row.classList.add("completed")
+    } 
 }
+
+function searchList(e){
+var input, filter, rows, txtValue;
+ input = document.getElementById("searchInput");
+ filter = input.value.toUpperCase();
+ rows = document.getElementsByTagName("tr");
+
+ for (var i = 0; i < rows.length; i++){
+    item = rows[i].getElementsByTagName("td")[1]
+    console.log(item)
+    if (item) {
+            txtValue = item.textContent || item.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                rows[i].style.display = "";
+            } else {
+                rows[i].style.display = "none";
+            }
+        }
+    }
+}
+
 
 addItembutton.addEventListener('click', addItem)
 checkItems.forEach(item => item.addEventListener('click', checkItem))
